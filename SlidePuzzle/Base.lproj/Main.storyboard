@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Slide View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SlideViewController" customModule="SlidePuzzle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mrv-v2-2KL">
+                                <rect key="frame" x="36" y="40" width="303" height="427"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URN-T2-SVg">
+                                <rect key="frame" x="136.5" y="516" width="101" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Shuffle"/>
+                                <connections>
+                                    <action selector="ResetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="36K-sp-qKL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mrv-v2-2KL" secondAttribute="trailing" constant="20" id="1qo-bv-EpZ"/>
+                            <constraint firstItem="Mrv-v2-2KL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="QM4-j5-b0g"/>
+                            <constraint firstItem="Mrv-v2-2KL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="dPZ-Mj-h3F"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="URN-T2-SVg" secondAttribute="bottom" constant="100" id="dbB-pa-aOl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Mrv-v2-2KL" secondAttribute="bottom" constant="200" id="kvx-IZ-Twp"/>
+                            <constraint firstItem="URN-T2-SVg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x8C-ex-Fki"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="puzzleView" destination="Mrv-v2-2KL" id="xzI-Fj-SaG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
